@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.testng.listeners.UnknownRetryClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.testng.listeners.UnknownFailedTest">
+        <methods>
+          <include name="unknownFail"/>
+        </methods>
+      </class> <!-- com.testng.listeners.UnknownFailedTest -->
+      <class name="com.testng.attributes.AlwaysRun">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.testng.attributes.AlwaysRun -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
